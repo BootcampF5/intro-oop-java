@@ -1,6 +1,9 @@
 package oop.clases;
 
-public class Emotion extends Character{
+import oop.interfaz.Feeding;
+import oop.interfaz.Routine;
+
+public class Emotion extends Character implements Routine{
     protected String color;
     private boolean isPositive;
     private int intensity;
@@ -14,6 +17,17 @@ public class Emotion extends Character{
 
     @Override
     public String introduce() {
-        return super.introduce() + " and I'm an emotion.";
+        return  "Hi, I'm " + super.getName() + " and I'm an emotion.";
     }
+
+    @Override
+    public String wakeup() {
+        return "I'm up!";
+    }
+
+    @Override
+    public String sleep() {
+        return "I'm sleeping!";
+    }
+
 }

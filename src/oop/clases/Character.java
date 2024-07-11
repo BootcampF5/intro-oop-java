@@ -1,6 +1,6 @@
 package oop.clases;
 
-public class Character {
+public abstract class Character {
     private String name;
     private int age;
 
@@ -9,9 +9,8 @@ public class Character {
         this.age = age;
     }
 
-    public String introduce() {
-        return "Hi, I'm " + this.name;
-    }
+    public abstract String introduce();
+
 
     public String getName() {
         return this.name;
@@ -28,5 +27,6 @@ public class Character {
     public void setAge(int age) {
         this.age = age;
     }
+    
 
 }
